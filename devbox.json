@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.11.0/.schema/devbox.schema.json",
+  "packages": [
+    "python@3.11",
+    "poetry@latest",
+    "ffmpeg@latest",
+    "pandoc@2.19.2"
+  ],
+  "shell": {
+    "init_hook": [
+      "[ ! -f .env ] || export $(sed 's/#.*//g' .env | xargs)",
+      "poetry shell",
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}

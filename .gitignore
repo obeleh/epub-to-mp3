@@ -1,0 +1,10 @@
+inputs
+wav
+txt
+mp3
+.devbox
+.venv
+
+.DS_Store
+.idea
+__pycache__
